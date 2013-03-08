@@ -1,0 +1,14 @@
+title Using Web Channels \n(producer and consumer are web workers)
+
+main->producer\n(port1): sendMessage(someData, [channel.port1])
+producer\n(port1)->producer\n(port1): port1.onMessage = ...
+main->consumer\n(port2): sendMessage(someData, [channel.port2])
+consumer\n(port2)->consumer\n(port2): port2.onMessage = ...
+note right of producer\n(port1): Now, message handlers are added to the both ports.         \n                             Let's get started...
+loop while( loops.number < MAX )
+producer\n(port1)->producer\n(port1): Work\nWork\nWork\nWork\nWork\nWork
+producer\n(port1)->consumer\n(port2): port1.sendMessage( data )
+consumer\n(port2)->consumer\n(port2): Work\nWork\nWork\nWork\nWork\nWork
+consumer\n(port2)->producer\n(port1): port2.sendMessage( data )
+producer\n(port1)->main:sendMessage( data )
+end
