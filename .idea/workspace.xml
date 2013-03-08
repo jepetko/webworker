@@ -38,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="producer.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="producer.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/producer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="33" selection-start="1996" selection-end="1996" vertical-scroll-proportion="0.0">
+            <state line="66" column="57" selection-start="2149" selection-end="2149" vertical-scroll-proportion="0.6181818">
               <folding />
             </state>
           </provider>
@@ -50,7 +50,7 @@
       <file leaf-file-name="consumer.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/consumer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="9" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
+            <state line="26" column="67" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -65,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="127" column="21" selection-start="4129" selection-end="4129" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,12 +107,12 @@
         <option value="$PROJECT_DIR$/goals.html" />
         <option value="$PROJECT_DIR$/js/worker.js" />
         <option value="$PROJECT_DIR$/js/consumer.js" />
-        <option value="$PROJECT_DIR$/js/producer.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/worker.html" />
         <option value="$PROJECT_DIR$/sequencediagram.txt" />
         <option value="$PROJECT_DIR$/js/common.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/producer.js" />
       </list>
     </option>
   </component>
@@ -378,20 +378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/consumer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="9" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/producer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="33" selection-start="1996" selection-end="1996" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sequencediagram.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0">
@@ -408,7 +394,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="127" column="21" selection-start="4129" selection-end="4129" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/consumer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="67" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/producer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="57" selection-start="2149" selection-end="2149" vertical-scroll-proportion="0.6181818">
           <folding />
         </state>
       </provider>

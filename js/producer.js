@@ -19,6 +19,7 @@ self.producer = (function() {
 
             return arr;
         },
+        //more methods for data generation
         anyNumber : function(arr,max,idxInterrupt) {
             var arr = [];
             for( var i=0; i<max; i++ ) {
@@ -45,13 +46,6 @@ self.producer = (function() {
                 arr[arr.length] = str;
             }
             return arr;
-        },
-        generate : function(arr,idxInterrupt) {
-            var methods = ['fibonacci', 'anyNumber', 'anyString'];
-            //var m = methods[ randomIdx(2) ];
-            var m = methods[ 0 ];
-
-            return this[m](arr,MAX_ELEMENTS,idxInterrupt);
         }
     }
 })();
@@ -70,7 +64,7 @@ self.onmessage = function(e) {
                         self.postMessage( { 'action' : 'end' } );
                         self.close();
                     } else {
-                        var arr = self.producer.generate( arr, randomIdx(MAX_ELEMENTS) );
+                        var arr = self.producer.fibonacci( arr, randomIdx(MAX_ELEMENTS) );
                         port.postMessage( { 'action' : 'consume', 'arr' : arr, 'iter' : ++iter } );
                     }
                     break;
@@ -80,7 +74,7 @@ self.onmessage = function(e) {
     var action = e.data.action;
     switch(action) {
         case 'start':
-            var arr = self.producer.generate( [], randomIdx(MAX_ELEMENTS) );
+            var arr = self.producer.fibonacci( [], randomIdx(MAX_ELEMENTS) );
             port.postMessage( { 'action' : 'consume', 'arr' : arr, 'iter' : 0 } );
             break;
         default:
