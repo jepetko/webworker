@@ -1,5 +1,8 @@
 $( function() {
-
+    /**
+     * contains the records and notifies the views when the records get reset
+      * @constructor
+     */
     function Model() {
         this.records = [];
         this.observers = [];
@@ -17,6 +20,12 @@ $( function() {
         }
     };
 
+    /**
+     * list view which reflects the changes of the data
+     * @param m
+     * @return {*}
+     * @constructor
+     */
     function ListView(m) {
         this.model = m;
         this.div = null;
@@ -31,8 +40,6 @@ $( function() {
             return this;
         }
         this.update = function(arr) {
-            //console.log( 'INPUT' );
-            //console.log( arr );
             var len = arr.length, val = this.lastVal.length;
             var delta = len - val;
             var i = 0, f = (delta < 0) ? -1 : 1;
@@ -41,16 +48,27 @@ $( function() {
                 this.vals.push( (f == -1) ? '-' : ( arr[val+i] ) );
                 i++;
             }
-            //console.log('CURRENT VALUES');
-            //console.log( this.vals );
             this.lastVal = arr;
         }
         this.getVals = function() {
             return this.vals;
         }
+        this.display = function(val) {
+            if( val != '-' ) {
+                this.div.append('<div class="element">' + val + '</div>');
+            } else {
+                this.div.children().last().remove();
+            }
+        }
         return this.init();
     };
 
+    /**
+     * progress view which reflects the changes of the data
+     * @param m
+     * @return {*}
+     * @constructor
+     */
     function ProgressView(m) {
         this.model = m;
         this.progress = null;
@@ -64,7 +82,6 @@ $( function() {
         }
         this.update = function(arr) {
             if( !arr ) return;
-            //console.log('PROGRESS');
             var len = arr.length, val = (this.vals.length == 0) ? 0 : this.vals[this.vals.length-1];
             var delta = len - val;
             var i = 0, f = (delta < 0) ? -1 : 1;
@@ -77,12 +94,23 @@ $( function() {
         this.getVals = function() {
             return this.vals;
         }
+        this.display = function(val) {
+            this.progress.attr('value', val);
+        }
         return this.init();
     }
 
     var model = new Model();
     var views = [new ListView(model), new ProgressView(model)];
 
+    /**
+     * contoller which is responsible for
+     * <ul>
+     *     <li>the instantiation of the workers and the proper initialization of them (see init method)</li>
+     *     <li>the animation of changes when the work is done (see play method)</li>
+     * </ul>
+     * @type {*}
+     */
     var controller = (function(m,v) {
         return {
             model : m, views : v, producer : null, consumer : null, channel : null,
@@ -117,13 +145,8 @@ $( function() {
                     $(this).queue( (function(t,dataVal,progVal) {
                         var dataView = t.views[0], progView = t.views[1];
                         return function() {
-                            if( dataVal != '-' ) {
-                                dataView.div.append('<div class="element">' + dataVal + '</div>');
-                            } else {
-                                dataView.div.children().last().remove();
-                            }
-                            progView.progress.attr('value', progVal);
-
+                            dataView.display(dataVal);
+                            progView.display(progVal);
                             //dequeue:
                             setTimeout( (function(t) {
                                 return function() {
