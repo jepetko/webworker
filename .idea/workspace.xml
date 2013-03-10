@@ -92,10 +92,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.ru" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="config.ru" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.ru">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="39" selection-start="57" selection-end="57" vertical-scroll-proportion="0.026548672">
+            <state line="13" column="1" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,6 +132,7 @@
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/producer.js" />
         <option value="$PROJECT_DIR$/config.ru" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -299,13 +309,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="42" selection-start="2897" selection-end="2897" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/atlassian-ide-plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="23" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
@@ -398,7 +401,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.ru">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="39" selection-start="57" selection-end="57" vertical-scroll-proportion="0.026548672">
+        <state line="13" column="1" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
