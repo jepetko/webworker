@@ -3,4 +3,5 @@ source "https://rubygems.org"
 
 # gem "rails"
 
-gem "webrick"
+gem "thin"
+gem "rack"
