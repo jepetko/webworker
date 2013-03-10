@@ -1,7 +1,5 @@
 body {
-    font-family: "Lucida Console";
-    font-size: 30pt;
-    font-weight: bold;
+
 }
 
 progress, progress::-webkit-progress-bar {
@@ -30,6 +28,9 @@ progress, progress::-webkit-progress-bar-value, -webkit-progress-bar, -moz-progr
     text-align: center;
     border: 1px solid #7cfc00;
     box-shadow: 5px 5px 5px #d3d3d3;
+    font-family: "Lucida Console";
+    font-size: 30pt;
+    font-weight: bold;
 }
 
 .progressbar {

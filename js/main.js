@@ -115,6 +115,12 @@ $( function() {
         return {
             model : m, views : v, producer : null, consumer : null, channel : null,
             init : function() {
+                if( typeof MessageChannel == 'undefined' ) {
+                    var b = $('body');
+                    b.append('<div id="message" title="Browser not supported"><p>Your browser doesn\'t support MessageChannel. Use Chrome or Opera which might have most likely implemented it.</p></div>');
+                    $( "#message" ).dialog({ dialogClass: "alert", text: "hello" });
+                    return this;
+                }
                 this.channel = new MessageChannel();
                 this.producer = new Worker('js/producer.js');
                 this.consumer = new Worker('js/consumer.js');
@@ -134,8 +140,10 @@ $( function() {
             },
             start : function()
             {
-                this.producer.postMessage({ action : 'start'}, [this.channel.port1]);
-                this.consumer.postMessage({ action : 'start'}, [this.channel.port2]);
+                if( this.channel ) {
+                    this.producer.postMessage({ action : 'start'}, [this.channel.port1]);
+                    this.consumer.postMessage({ action : 'start'}, [this.channel.port2]);
+                }
             },
             play : function() {
                 var dataVals = this.views[0].getVals(), progVals = this.views[1].getVals();
